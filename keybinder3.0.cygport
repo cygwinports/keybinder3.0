@@ -1,0 +1,28 @@
+inherit gnome2
+
+NAME="keybinder3.0"
+VERSION=0.3.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="GTK+3 global key bindings library"
+DESCRIPTION="keybinder is a library for registering global keyboard shortcuts.
+Keybinder works with GTK-based applications using the X Window System.
+Bindings for GObject-Introspection are included."
+HOMEPAGE="https://github.com/engla/keybinder"
+SRC_URI="${HOMEPAGE}/releases/download/keybinder-3.0-v${VERSION}/keybinder-3.0-${VERSION}.tar.gz"
+SRC_DIR="keybinder-3.0-${VERSION}"
+PATCH_URI="
+	0.3.1-no-undefined.patch
+"
+
+PKG_NAMES="libkeybinder3.0_0 libkeybinder3.0-devel libkeybinder3.0-doc
+	   girepository-Keybinder3.0"
+libkeybinder3_0_0_CONTENTS="usr/bin/cygkeybinder-3.0-0.dll usr/share/doc/"
+libkeybinder3_0_devel_CONTENTS="
+	usr/include/keybinder-3.0/
+	usr/lib/libkeybinder-3.0.dll.a
+	usr/lib/pkgconfig/keybinder-3.0.pc
+"
+libkeybinder3_0_doc_CATEGORY="Doc"
+libkeybinder3_0_doc_CONTENTS="usr/share/gtk-doc/html/keybinder-3.0/"
+girepository_Keybinder3_0_CONTENTS="usr/*/gir*-1.0/Keybinder-3.0.*"

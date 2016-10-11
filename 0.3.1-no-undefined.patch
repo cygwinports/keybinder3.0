@@ -1,0 +1,11 @@
+--- origsrc/keybinder-3.0-0.3.1/libkeybinder/Makefile.am	2015-11-06 09:14:52.000000000 -0600
++++ src/keybinder-3.0-0.3.1/libkeybinder/Makefile.am	2016-10-11 01:53:19.549094400 -0500
+@@ -9,7 +9,7 @@ LIBKEYBINDER_VERSION = $(LT_CURRENT):$(L
+ keybinderdir = $(libdir)
+ keybinder_LTLIBRARIES = libkeybinder-3.0.la
+ libkeybinder_3_0_la_SOURCES = bind.c
+-libkeybinder_3_0_la_LDFLAGS = $(GTK_LIBS)  -version-info $(LIBKEYBINDER_VERSION)
++libkeybinder_3_0_la_LDFLAGS = $(GTK_LIBS)  -version-info $(LIBKEYBINDER_VERSION) -no-undefined
+ keybinder_includedir = $(pkgincludedir)
+ keybinder_include_HEADERS = keybinder.h
+ 
